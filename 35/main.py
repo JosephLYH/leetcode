@@ -20,5 +20,5 @@ testcases.append(([1,3,5,6], 2, 1))
 testcases.append(([1,3,5,6], 7, 4))
 
 solution = Solution()
-for nums, target, output in testcases:
-    assert solution.searchInsert(nums, target) == output
+for testcase in testcases:
+    assert getattr(solution, dir(solution)[-1])(*testcase[:-1]) == testcase[-1]

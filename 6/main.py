@@ -20,6 +20,5 @@ testcases.append(('PAYPALISHIRING', 4, 'PINALSIGYAHRPI'))
 testcases.append(('A', 1, 'A'))
 
 solution = Solution()
-for s, numRows, expected in testcases:
-    output = solution.convert(s, numRows)
-    assert output == expected, (s, numRows, output, expected)
+for testcase in testcases:
+    assert getattr(solution, dir(solution)[-1])(*testcase[:-1]) == testcase[-1]

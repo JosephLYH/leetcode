@@ -13,5 +13,5 @@ testcases.append((2, [[1,2],[4,3]]))
 testcases.append((1, [[1]]))
 
 solution = Solution()
-for input, output in testcases:
-    assert solution.generateMatrix(input) == output
+for testcase in testcases:
+    assert getattr(solution, dir(solution)[-1])(*testcase[:-1]) == testcase[-1]

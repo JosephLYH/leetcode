@@ -22,6 +22,5 @@ testcases.append(([4,5,6,7,0,1,2], 3, -1))
 testcases.append(([1], 0, -1))
 
 solution = Solution()
-for nums, target, expected in testcases:
-    output = solution.search(nums, target)
-    assert output == expected, (nums, target, output, expected)
+for testcase in testcases:
+    assert getattr(solution, dir(solution)[-1])(*testcase[:-1]) == testcase[-1]
