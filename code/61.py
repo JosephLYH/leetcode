@@ -1,5 +1,5 @@
 from typing import Optional
-from lib import ListNode, ListNodes, node_to_list
+from lib.linked_list import ListNode, ListNodes, node_to_list
 
 class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:

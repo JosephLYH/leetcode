@@ -17,10 +17,10 @@ class ListNodes:
         
         self.head = tail
     
-    def to_list(self):
+    def to_list(self) -> list[int]:
         return node_to_list(self.head)
     
-def node_to_list(head):
+def node_to_list(head) -> list[int]:
     result = []
     temp = head
     while temp:
