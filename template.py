@@ -1,6 +1,6 @@
 class Solution:
     def template(self):
-        pass
+        raise NotImplementedError
     
 testcases = []
 
