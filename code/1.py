@@ -12,4 +12,4 @@ testcases.append(([2,7,11,15], 9, [0, 1]))
 
 solution = Solution()
 for testcase in testcases:
-    assert getattr(solution, dir(solution)[-1])(*testcase[:-1]) == testcase[-1]
+    assert getattr(solution, dir(solution)[-1])(*testcase[:-1]) == testcase[-1], testcase
