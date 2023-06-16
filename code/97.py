@@ -1,19 +1,17 @@
-from collections import defaultdict
-
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
-        # determine in O(len(s1 + s2)) if False
-        counts = defaultdict(lambda: 0)
-        for letter in s1: counts[letter] += 1
-        for letter in s2: counts[letter] += 1
+        len1, len2, len3 = len(s1), len(s2), len(s3)
+        if len1+len2 != len3:
+            return False
 
-        counts2 = defaultdict(lambda: 0)
-        for letter in s3: counts2[letter] += 1
-
-        for letter in counts:
-            if counts[letter] != counts2[letter]: return False
-
-        
+        dp = [True for _ in range(len2+1)]
+        for i in range(1, len2+1):
+            dp[i] = dp[i-1] and s2[i-1] == s3[i-1]
+        for i in range(1, len1+1):
+            dp[0] = (dp[0] and s1[i-1] == s3[i-1])
+            for j in range(1, len2+1):
+                dp[j] = (dp[j] and s1[i-1] == s3[i-1+j]) or (dp[j-1] and s2[j-1] == s3[i-1+j])
+        return dp[-1]
     
 testcases = []
 testcases.append(('aabcc', 'dbbca', 'aadbbcbcac', True))
