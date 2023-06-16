@@ -6,6 +6,17 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def to_list(self) -> list[int]:
+        result = []
+        temp = self
+        while temp:
+            result.append(temp.val)
+            temp = temp.next
+        return result
+
+    def __str__(self) -> str:
+        return str(self.to_list())
+
 # Definition for creating a singly-linked list from a list of values.
 class ListNodes:
     def __init__(self, vals=[]):
@@ -18,12 +29,4 @@ class ListNodes:
         self.head = tail
     
     def to_list(self) -> list[int]:
-        return node_to_list(self.head)
-    
-def node_to_list(head) -> list[int]:
-    result = []
-    temp = head
-    while temp:
-        result.append(temp.val)
-        temp = temp.next
-    return result
+        return self.head.to_list()

@@ -1,5 +1,5 @@
 from typing import Optional
-from lib.linked_list import ListNode, ListNodes, node_to_list
+from lib.linked_list import ListNode, ListNodes
 
 class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
@@ -32,4 +32,5 @@ testcases.append((ListNodes([1, 2]).head, 1, [2, 1]))
  
 solution = Solution()
 for testcase in testcases:
-    assert node_to_list(getattr(solution, dir(solution)[-1])(*testcase[:-1])) == testcase[-1]
+    result = getattr(solution, dir(solution)[-1])(*testcase[:-1]).to_list()
+    assert result == testcase[-1], (*testcase, result)
