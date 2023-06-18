@@ -9,7 +9,7 @@ class Trie:
                 trie[letter] = {}
             trie = trie[letter]
         
-        trie[''] = ''
+        trie[''] = {}
 
     def search(self, word: str) -> bool:
         trie = self.trie
@@ -18,10 +18,7 @@ class Trie:
                 return False
             trie = trie[letter]
         
-        if not '' in trie:
-            return False
-        
-        return True
+        return '' in trie
 
     def startsWith(self, prefix: str) -> bool:
         trie = self.trie
