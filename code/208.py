@@ -5,15 +5,16 @@ class Trie:
     def insert(self, word: str) -> None:
         trie = self.trie
         for letter in word:
-            if not letter in trie:
+            if letter not in trie:
                 trie[letter] = {}
             trie = trie[letter]
+        
         trie[''] = ''
 
     def search(self, word: str) -> bool:
         trie = self.trie
         for letter in word:
-            if not letter in trie:
+            if letter not in trie:
                 return False
             trie = trie[letter]
         
@@ -25,7 +26,7 @@ class Trie:
     def startsWith(self, prefix: str) -> bool:
         trie = self.trie
         for letter in prefix:
-            if not letter in trie:
+            if letter not in trie:
                 return False
             trie = trie[letter]
         
