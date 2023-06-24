@@ -1,13 +1,12 @@
 from typing import List
 
 class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        return sum(range(len(nums) + 1)) - sum(nums)
+    def countBits(self, n: int) -> List[int]:
+        return [bin(i).count('1') for i in range(n + 1)]
     
 testcases = []
-testcases.append(([3,0,1], 2))
-testcases.append(([0,1], 2))
-testcases.append(([9,6,4,2,3,5,7,0,1], 8))
+testcases.append([2, [0,1,1]])
+testcases.append((5, [0,1,1,2,1,2]))
 
 solution = Solution()
 for testcase in testcases:
