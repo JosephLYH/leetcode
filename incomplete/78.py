@@ -3,7 +3,12 @@ from typing import List
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         subsets = []
-        
+
+        # 2 ** len(nums) is the number of subsets
+        # 1 << j is the jth bit
+        # i & (1 << j) is the jth bit of i
+        # if the jth bit of i is 1, then nums[j] is in the subset
+        # if the jth bit of i is 0, then nums[j] is not in the subset
         for i in range(2 ** len(nums)):
             subset = []
             for j in range(len(nums)):
