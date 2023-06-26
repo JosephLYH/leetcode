@@ -28,3 +28,6 @@ class ListNodes:
     
     def to_list(self) -> list[int]:
         return self.head.to_list()
+    
+if __name__ == '__main__':
+    print(ListNodes([5,4,8,11,None,13,4,7,2,None,None,5,1]).to_list())
