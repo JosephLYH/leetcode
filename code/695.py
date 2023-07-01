@@ -1,20 +1,23 @@
 from typing import List
 
 class Solution:
-    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-        seen = set()
+    def getAverages(self, nums: List[int], k: int) -> List[int]:
+        prefixs = [0] * (len(nums) + 1)
 
-        def area(r, c):
-            if not (0 <= r < len(grid) and 0 <= c < len(grid[0]) and (r, c) not in seen and grid[r][c]):
-                return 0
-            seen.add((r, c))
-            return 1 + area(r+1, c) + area(r-1, c) + area(r, c+1) + area(r, c-1)
-        
-        return max(area(r, c) for r in range(len(grid)) for c in range(len(grid[0])))
+        for i in range(len(nums)):
+            prefixs[i+1] = prefixs[i] + nums[i]
+
+        averages = [-1] * len(nums)
+        for i in range(len(nums)):
+            if i - k >= 0 and i + k < len(nums):
+                averages[i] = (prefixs[i+k+1] - prefixs[i-k]) // (2*k + 1)
+
+        return averages
     
 testcases = []
-testcases.append(([[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]], 6))
-testcases.append(([[0,0,0,0,0,0,0,0]], 0))
+testcases.append(([7,4,3,9,1,8,5,2,6], 3, [-1,-1,-1,5,4,4,-1,-1,-1]))
+testcases.append(([100000], 0, [100000]))
+testcases.append(([8], 100000, [-1]))
 
 solution = Solution()
 for testcase in testcases:
