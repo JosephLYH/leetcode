@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         subsets = []
@@ -18,13 +19,16 @@ class Solution:
 
         return subsets
 
+
 testcases = []
-testcases.append([[1,2,3], [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]])
-testcases.append([[0], [[],[0]]])
+testcases.append([[1, 2, 3], [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]])
+testcases.append([[0], [[], [0]]])
 
 solution = Solution()
 for testcase in testcases:
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase[:-1])
-        assert False, f'testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}'
+        assert (
+            False
+        ), f"testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}"
