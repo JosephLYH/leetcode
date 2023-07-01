@@ -8,7 +8,7 @@ class SmallestInfiniteSet:
             temp = min(self.added)
             self.added.remove(temp)
             return temp
-        
+
         self.current += 1
         return self.current - 1
 

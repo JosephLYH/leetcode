@@ -5,7 +5,7 @@ class MyStack:
     def push(self, x: int) -> None:
         length = len(self.queue)
         self.queue.append(x)
-        
+
         for _ in range(length):
             self.queue.append(self.queue.pop(0))
 

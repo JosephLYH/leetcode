@@ -1,11 +1,12 @@
 from typing import Optional
 from lib.linked_list import ListNode
 
+
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         length = 0
         p = head
-        
+
         # get length
         while p:
             length += 1
@@ -37,8 +38,9 @@ class Solution:
                 return False
             p1 = p1.next
             p2 = p2.next
-        
+
         return True
+
 
 testcases = []
 
@@ -47,4 +49,6 @@ for testcase in testcases:
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase[:-1])
-        assert False, f'testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}'
+        assert (
+            False
+        ), f"testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}"

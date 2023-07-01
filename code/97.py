@@ -1,25 +1,30 @@
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         len1, len2, len3 = len(s1), len(s2), len(s3)
-        if len1+len2 != len3:
+        if len1 + len2 != len3:
             return False
 
-        dp = [True for _ in range(len2+1)]
-        for i in range(1, len2+1):
-            dp[i] = dp[i-1] and s2[i-1] == s3[i-1]
-        for i in range(1, len1+1):
-            dp[0] = (dp[0] and s1[i-1] == s3[i-1])
-            for j in range(1, len2+1):
-                dp[j] = (dp[j] and s1[i-1] == s3[i-1+j]) or (dp[j-1] and s2[j-1] == s3[i-1+j])
+        dp = [True for _ in range(len2 + 1)]
+        for i in range(1, len2 + 1):
+            dp[i] = dp[i - 1] and s2[i - 1] == s3[i - 1]
+        for i in range(1, len1 + 1):
+            dp[0] = dp[0] and s1[i - 1] == s3[i - 1]
+            for j in range(1, len2 + 1):
+                dp[j] = (dp[j] and s1[i - 1] == s3[i - 1 + j]) or (
+                    dp[j - 1] and s2[j - 1] == s3[i - 1 + j]
+                )
         return dp[-1]
-    
+
+
 testcases = []
-testcases.append(('aabcc', 'dbbca', 'aadbbcbcac', True))
-testcases.append(('aabcc', 'dbbca', 'aadbbbaccc', False))
-testcases.append(('', '', '', True))
-testcases.append(('a', '', 'a', True))
+testcases.append(("aabcc", "dbbca", "aadbbcbcac", True))
+testcases.append(("aabcc", "dbbca", "aadbbbaccc", False))
+testcases.append(("", "", "", True))
+testcases.append(("a", "", "a", True))
 
 solution = Solution()
 for testcase in testcases:
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
-    assert output == testcase[-1], f'testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}'
+    assert (
+        output == testcase[-1]
+    ), f"testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}"

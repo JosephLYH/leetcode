@@ -14,13 +14,16 @@ class Solution:
                 minimum = min(minimum, seen[key])
 
         return minimum if minimum != len(s) else -1
-    
+
+
 testcases = []
-testcases.append(('leetcode', 0))
-testcases.append(('loveleetcode', 2))
-testcases.append(('aabb', -1))
+testcases.append(("leetcode", 0))
+testcases.append(("loveleetcode", 2))
+testcases.append(("aabb", -1))
 
 solution = Solution()
 for testcase in testcases:
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
-    assert output == testcase[-1], f'testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}'
+    assert (
+        output == testcase[-1]
+    ), f"testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}"
