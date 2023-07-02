@@ -1,26 +1,20 @@
-import math
+from typing import List
+
+
+class LargerNumKey(str):
+    def __lt__(x, y):
+        return x + y > y + x
 
 
 class Solution:
-    def countPrimes(self, n: int) -> int:
-        if n < 3:
-            return 0
-
-        sieve = [1] * n
-        sieve[0] = sieve[1] = 0
-
-        for i in range(2, math.ceil(math.sqrt(n))):
-            if sieve[i] == 1:
-                for j in range(i * i, n, i):
-                    sieve[j] = 0
-
-        return sum(sieve)
+    def largestNumber(self, nums):
+        largest_num = "".join(sorted(map(str, nums), key=LargerNumKey))
+        return "0" if largest_num[0] == "0" else largest_num
 
 
 testcases = []
-testcases.append((10, 4))
-testcases.append((0, 0))
-testcases.append((1, 0))
+testcases.append(([10, 2], "210"))
+testcases.append(([3, 30, 34, 5, 9], "9534330"))
 
 solution = Solution()
 for testcase in testcases:
