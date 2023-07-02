@@ -2,24 +2,53 @@ from typing import List
 
 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
-        dp = [0] * len(nums)
+    def numIslands(self, grid: List[List[str]]) -> int:
+        x_len = len(grid) - 1
+        y_len = len(grid[0]) - 1
 
-        for i in range(len(nums)):
-            if i == 0:
-                dp[i] = nums[i]
-            elif i == 1:
-                dp[i] = max(nums[i], nums[i - 1])
-            else:
-                dp[i] = max(nums[i] + dp[i - 2], dp[i - 1])
+        def bfs(i, j):
+            if grid[i][j] == "0":
+                return
 
-        return dp[-1]
+            grid[i][j] = "0"
+            bfs(max(0, i - 1), j)
+            bfs(min(x_len, i + 1), j)
+            bfs(i, max(0, j - 1))
+            bfs(i, min(y_len, j + 1))
+
+        count = 0
+        for i in range(x_len + 1):
+            for j in range(y_len + 1):
+                if grid[i][j] == "1":
+                    count += 1
+                    bfs(i, j)
+
+        return count
 
 
 testcases = []
-testcases.append(([1, 2, 3, 1], 4))
-testcases.append(([2, 7, 9, 3, 1], 12))
-testcases.append(([2, 1, 1, 2], 4))
+testcases.append(
+    (
+        [
+            ["1", "1", "1", "1", "0"],
+            ["1", "1", "0", "1", "0"],
+            ["1", "1", "0", "0", "0"],
+            ["0", "0", "0", "0", "0"],
+        ],
+        1,
+    )
+)
+testcases.append(
+    (
+        [
+            ["1", "1", "0", "0", "0"],
+            ["1", "1", "0", "0", "0"],
+            ["0", "0", "1", "0", "0"],
+            ["0", "0", "0", "1", "1"],
+        ],
+        3,
+    )
+)
 
 solution = Solution()
 for testcase in testcases:
