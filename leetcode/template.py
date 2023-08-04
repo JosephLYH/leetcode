@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def template(self):
         raise NotImplementedError
@@ -7,7 +10,7 @@ testcases = []
 
 solution = Solution()
 for testcase in testcases:
-    output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
+    output = getattr(solution, dir(solution)[-1])(deepcopy(*testcase[:-1]))
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase[:-1])
         assert (
