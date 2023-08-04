@@ -16,6 +16,24 @@ class ListNode:
         return str(self.to_list())
 
 
+# Definition for a doubly-linked list.
+class DoubleListNode(ListNode):
+    def __init__(self, val=0, next=None, prev=None):
+        super().__init__(val, next)
+        self.prev = prev
+
+    def to_list(self) -> list[int]:
+        result = []
+        temp = self
+        while temp:
+            result.append(temp.val)
+            temp = temp.next
+        return result
+
+    def __str__(self) -> str:
+        return str(self.to_list())
+
+
 # Definition for creating a singly-linked list from a list of values.
 class ListNodes:
     def __init__(self, vals=[]):
