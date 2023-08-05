@@ -1,6 +1,5 @@
 // Theatre Square
 
-#include <vector>
 #include <iostream>
 #include <cmath>
 
