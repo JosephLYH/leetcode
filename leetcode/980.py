@@ -39,7 +39,8 @@ testcases.append(([[0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0
 
 solution = Solution()
 for testcase in testcases:
-    output = getattr(solution, dir(solution)[-1])(deepcopy(*testcase[:-1]))
+    testcase = deepcopy(testcase)
+    output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase[:-1])
         assert (
