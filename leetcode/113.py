@@ -33,8 +33,8 @@ testcases.append(
         [[5, 4, 11, 2], [5, 8, 4, 5]],
     )
 )
-testcases.append((Tree([1, 2, 3]).root, 5, []))
-testcases.append((Tree([1, 2]).root, 0, []))
+testcases.append([Tree([1, 2, 3]).root, 5, []])
+testcases.append([Tree([1, 2]).root, 0, []])
 
 solution = Solution()
 for testcase in testcases:

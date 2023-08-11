@@ -9,9 +9,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(([2, 3, 5, 1, 3], 3, [True, True, True, False, True]))
-testcases.append(([4, 2, 1, 1, 2], 1, [True, False, False, False, False]))
-testcases.append(([12, 1, 12], 10, [True, False, True]))
+testcases.append([[2, 3, 5, 1, 3], 3, [True, True, True, False, True]])
+testcases.append([[4, 2, 1, 1, 2], 1, [True, False, False, False, False]])
+testcases.append([[12, 1, 12], 10, [True, False, True]])
 
 solution = Solution()
 for testcase in testcases:

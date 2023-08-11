@@ -4,8 +4,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(([5, 3, 4, 5], True))
-testcases.append(([3, 7, 2, 3], True))
+testcases.append([[5, 3, 4, 5], True])
+testcases.append([[3, 7, 2, 3], True])
 
 solution = Solution()
 for testcase in testcases:

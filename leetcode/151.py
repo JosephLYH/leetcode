@@ -4,9 +4,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(("the sky is blue", "blue is sky the"))
-testcases.append(("  hello world!  ", "world! hello"))
-testcases.append(("a good   example", "example good a"))
+testcases.append(["the sky is blue", "blue is sky the"])
+testcases.append(["  hello world!  ", "world! hello"])
+testcases.append(["a good   example", "example good a"])
 
 solution = Solution()
 for testcase in testcases:

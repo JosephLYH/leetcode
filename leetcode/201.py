@@ -6,9 +6,9 @@ class Solution:
 
 
 testcases = []
-testcases.append((5, 7, 4))
-testcases.append((0, 0, 0))
-testcases.append((1, 2147483647, 0))
+testcases.append([5, 7, 4])
+testcases.append([0, 0, 0])
+testcases.append([1, 2147483647, 0])
 
 solution = Solution()
 for testcase in testcases:

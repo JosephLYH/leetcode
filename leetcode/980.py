@@ -32,10 +32,10 @@ class Solution:
 
 
 testcases = []
-testcases.append(([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 2, -1]], 2))
-testcases.append(([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 2]], 4))
-testcases.append(([[0, 1], [2, 0]], 0))
-testcases.append(([[0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]], 1))
+testcases.append([[[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 2, -1]], 2])
+testcases.append([[[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 2]], 4])
+testcases.append([[[0, 1], [2, 0]], 0])
+testcases.append([[[0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]], 1])
 
 solution = Solution()
 for testcase in testcases:

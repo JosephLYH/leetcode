@@ -11,9 +11,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(("tree", "eetr"))
-testcases.append(("cccaaa", "cccaaa"))
-testcases.append(("Aabb", "bbAa"))
+testcases.append(["tree", "eetr"])
+testcases.append(["cccaaa", "cccaaa"])
+testcases.append(["Aabb", "bbAa"])
 
 solution = Solution()
 for testcase in testcases:

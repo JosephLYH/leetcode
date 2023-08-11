@@ -26,9 +26,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(("TTFF", 2, 4))
-testcases.append(("TFFT", 1, 3))
-testcases.append(("TTFTTFTT", 1, 5))
+testcases.append(["TTFF", 2, 4])
+testcases.append(["TFFT", 1, 3])
+testcases.append(["TTFTTFTT", 1, 5])
 
 solution = Solution()
 for testcase in testcases:

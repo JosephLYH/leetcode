@@ -20,8 +20,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(([3, 3, 3, 3, 5, 5, 5, 2, 2, 7], 2))
-testcases.append(([7, 7, 7, 7, 7, 7], 1))
+testcases.append([[3, 3, 3, 3, 5, 5, 5, 2, 2, 7], 2])
+testcases.append([[7, 7, 7, 7, 7, 7], 1])
 
 solution = Solution()
 for testcase in testcases:

@@ -22,9 +22,9 @@ class Solution:
 
 
 testcases = []
-testcases.append((12, 3, 3))
-testcases.append((7, 2, 7))
-testcases.append((4, 4, -1))
+testcases.append([12, 3, 3])
+testcases.append([7, 2, 7])
+testcases.append([4, 4, -1])
 
 solution = Solution()
 for testcase in testcases:

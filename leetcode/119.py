@@ -14,9 +14,9 @@ class Solution:
 
 
 testcases = []
-testcases.append((3, [1, 3, 3, 1]))
-testcases.append((0, [1]))
-testcases.append((1, [1, 1]))
+testcases.append([3, [1, 3, 3, 1]])
+testcases.append([0, [1]])
+testcases.append([1, [1, 1]])
 
 solution = Solution()
 for testcase in testcases:

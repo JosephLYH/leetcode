@@ -19,8 +19,8 @@ class Solution:
 
 
 testcases = []
-testcases.append((3, ["1", "2", "Fizz"]))
-testcases.append((5, ["1", "2", "Fizz", "4", "Buzz"]))
+testcases.append([3, ["1", "2", "Fizz"]])
+testcases.append([5, ["1", "2", "Fizz", "4", "Buzz"]])
 testcases.append(
     (
         15,

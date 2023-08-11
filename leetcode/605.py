@@ -18,8 +18,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(([1, 0, 0, 0, 1], 1, True))
-testcases.append(([1, 0, 0, 0, 1], 2, False))
+testcases.append([[1, 0, 0, 0, 1], 1, True])
+testcases.append([[1, 0, 0, 0, 1], 2, False])
 
 solution = Solution()
 for testcase in testcases:

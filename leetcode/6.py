@@ -15,9 +15,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(("PAYPALISHIRING", 3, "PAHNAPLSIIGYIR"))
-testcases.append(("PAYPALISHIRING", 4, "PINALSIGYAHRPI"))
-testcases.append(("A", 1, "A"))
+testcases.append(["PAYPALISHIRING", 3, "PAHNAPLSIIGYIR"])
+testcases.append(["PAYPALISHIRING", 4, "PINALSIGYAHRPI"])
+testcases.append(["A", 1, "A"])
 
 solution = Solution()
 for testcase in testcases:

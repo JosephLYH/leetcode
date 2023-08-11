@@ -7,9 +7,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(([3, 0, 1], 2))
-testcases.append(([0, 1], 2))
-testcases.append(([9, 6, 4, 2, 3, 5, 7, 0, 1], 8))
+testcases.append([[3, 0, 1], 2])
+testcases.append([[0, 1], 2])
+testcases.append([[9, 6, 4, 2, 3, 5, 7, 0, 1], 8])
 
 solution = Solution()
 for testcase in testcases:

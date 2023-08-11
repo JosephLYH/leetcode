@@ -20,8 +20,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(("hello", "holle"))
-testcases.append(("leetcode", "leotcede"))
+testcases.append(["hello", "holle"])
+testcases.append(["leetcode", "leotcede"])
 
 solution = Solution()
 for testcase in testcases:

@@ -16,9 +16,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(("/home/", "/home"))
-testcases.append(("/../", "/"))
-testcases.append(("/home//foo/", "/home/foo"))
+testcases.append(["/home/", "/home"])
+testcases.append(["/../", "/"])
+testcases.append(["/home//foo/", "/home/foo"])
 
 solution = Solution()
 for testcase in testcases:

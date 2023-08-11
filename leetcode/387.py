@@ -17,9 +17,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(("leetcode", 0))
-testcases.append(("loveleetcode", 2))
-testcases.append(("aabb", -1))
+testcases.append(["leetcode", 0])
+testcases.append(["loveleetcode", 2])
+testcases.append(["aabb", -1])
 
 solution = Solution()
 for testcase in testcases:

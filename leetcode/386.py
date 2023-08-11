@@ -26,8 +26,8 @@ class Solution:
 
 
 testcases = []
-testcases.append((13, [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]))
-testcases.append((2, [1, 2]))
+testcases.append([13, [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]])
+testcases.append([2, [1, 2]])
 
 solution = Solution()
 for testcase in testcases:

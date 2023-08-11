@@ -13,8 +13,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(([1, 5, 0, 3, 5], 3))
-testcases.append(([0], 0))
+testcases.append([[1, 5, 0, 3, 5], 3])
+testcases.append([[0], 0])
 
 solution = Solution()
 for testcase in testcases:

@@ -35,9 +35,9 @@ class Solution:
 
 
 testcases = []
-testcases.append(([[0, 1], [1, 0]], 2))
-testcases.append(([[0, 0, 0], [1, 1, 0], [1, 1, 0]], 4))
-testcases.append(([[1, 0, 0], [1, 1, 0], [1, 1, 0]], -1))
+testcases.append([[[0, 1], [1, 0]], 2])
+testcases.append([[[0, 0, 0], [1, 1, 0], [1, 1, 0]], 4])
+testcases.append([[[1, 0, 0], [1, 1, 0], [1, 1, 0]], -1])
 
 solution = Solution()
 for testcase in testcases:

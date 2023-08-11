@@ -11,9 +11,9 @@ class Solution:
 
 
 testcases = []
-testcases.append((6, True))
-testcases.append((1, True))
-testcases.append((14, False))
+testcases.append([6, True])
+testcases.append([1, True])
+testcases.append([14, False])
 
 solution = Solution()
 for testcase in testcases:

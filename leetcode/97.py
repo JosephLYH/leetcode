@@ -17,10 +17,10 @@ class Solution:
 
 
 testcases = []
-testcases.append(("aabcc", "dbbca", "aadbbcbcac", True))
-testcases.append(("aabcc", "dbbca", "aadbbbaccc", False))
-testcases.append(("", "", "", True))
-testcases.append(("a", "", "a", True))
+testcases.append(["aabcc", "dbbca", "aadbbcbcac", True])
+testcases.append(["aabcc", "dbbca", "aadbbbaccc", False])
+testcases.append(["", "", "", True])
+testcases.append(["a", "", "a", True])
 
 solution = Solution()
 for testcase in testcases:

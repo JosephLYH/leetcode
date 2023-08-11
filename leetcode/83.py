@@ -21,8 +21,8 @@ class Solution:
 
 
 testcases = []
-testcases.append((ListNodes([1, 1, 2]).head, [1, 2]))
-testcases.append((ListNodes([1, 1, 2, 3, 3]).head, [1, 2, 3]))
+testcases.append([ListNodes([1, 1, 2]).head, [1, 2]])
+testcases.append([ListNodes([1, 1, 2, 3, 3]).head, [1, 2, 3]])
 
 solution = Solution()
 for testcase in testcases:

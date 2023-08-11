@@ -12,8 +12,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(("abcd", "abcde", "e"))
-testcases.append(("", "y", "y"))
+testcases.append(["abcd", "abcde", "e"])
+testcases.append(["", "y", "y"])
 
 solution = Solution()
 for testcase in testcases:

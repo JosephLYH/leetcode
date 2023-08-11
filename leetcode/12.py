@@ -14,9 +14,9 @@ class Solution:
 
 
 testcases = []
-testcases.append((3, "III"))
-testcases.append((58, "LVIII"))
-testcases.append((1994, "MCMXCIV"))
+testcases.append([3, "III"])
+testcases.append([58, "LVIII"])
+testcases.append([1994, "MCMXCIV"])
 
 solution = Solution()
 for testcase in testcases:

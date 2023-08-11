@@ -19,8 +19,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT", ["AAAAACCCCC", "CCCCCAAAAA"]))
-testcases.append(("AAAAAAAAAAAAA", ["AAAAAAAAAA"]))
+testcases.append(["AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT", ["AAAAACCCCC", "CCCCCAAAAA"]])
+testcases.append(["AAAAAAAAAAAAA", ["AAAAAAAAAA"]])
 
 solution = Solution()
 for testcase in testcases:

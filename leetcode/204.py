@@ -13,8 +13,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(([10, 2], "210"))
-testcases.append(([3, 30, 34, 5, 9], "9534330"))
+testcases.append([[10, 2], "210"])
+testcases.append([[3, 30, 34, 5, 9], "9534330"])
 
 solution = Solution()
 for testcase in testcases:

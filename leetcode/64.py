@@ -19,8 +19,8 @@ class Solution:
 
 
 testcases = []
-testcases.append(([[1, 3, 1], [1, 5, 1], [4, 2, 1]], 7))
-testcases.append(([[1, 2, 3], [4, 5, 6]], 12))
+testcases.append([[[1, 3, 1], [1, 5, 1], [4, 2, 1]], 7])
+testcases.append([[[1, 2, 3], [4, 5, 6]], 12])
 
 solution = Solution()
 for testcase in testcases:

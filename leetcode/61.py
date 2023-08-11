@@ -29,10 +29,10 @@ class Solution:
 
 
 testcases = []
-testcases.append((ListNodes([1, 2, 3, 4, 5]).head, 2, [4, 5, 1, 2, 3]))
-testcases.append((ListNodes([0, 1, 2]).head, 4, [2, 0, 1]))
-testcases.append((ListNodes([1]).head, 99, [1]))
-testcases.append((ListNodes([1, 2]).head, 1, [2, 1]))
+testcases.append([ListNodes([1, 2, 3, 4, 5]).head, 2, [4, 5, 1, 2, 3]])
+testcases.append([ListNodes([0, 1, 2]).head, 4, [2, 0, 1]])
+testcases.append([ListNodes([1]).head, 99, [1]])
+testcases.append([ListNodes([1, 2]).head, 1, [2, 1]])
 
 solution = Solution()
 for testcase in testcases:
