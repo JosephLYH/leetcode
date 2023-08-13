@@ -33,10 +33,10 @@ testcases.append([[[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 13, False]
 
 solution = Solution()
 for testcase in testcases:
-    testcase = deepcopy(testcase)
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
-        getattr(solution, dir(solution)[-1])(*testcase[:-1])
+        getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])
         assert (
             False
         ), f"testcase: {testcase[:-1]}, expected: {testcase[-1]}, output: {output}"
