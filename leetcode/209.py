@@ -1,4 +1,5 @@
 from typing import List
+from copy import deepcopy
 
 
 class Solution:
@@ -27,6 +28,7 @@ testcases.append([11, [1, 1, 1, 1, 1, 1, 1, 1], 0])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     assert (
         output == testcase[-1]

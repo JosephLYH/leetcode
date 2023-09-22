@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def rangeBitwiseAnd(self, left: int, right: int) -> int:
         while right > left:
@@ -12,6 +15,7 @@ testcases.append([1, 2147483647, 0])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])

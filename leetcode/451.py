@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def frequencySort(self, s: str) -> str:
         self.freq = {}
@@ -17,6 +20,7 @@ testcases.append(["Aabb", "bbAa"])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])

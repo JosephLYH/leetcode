@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def reverseWords(self, s: str) -> str:
         return " ".join(s.strip().split()[::-1])
@@ -10,6 +13,7 @@ testcases.append(["a good   example", "example good a"])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])

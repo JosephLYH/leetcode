@@ -1,4 +1,5 @@
 from typing import List
+from copy import deepcopy
 
 
 class LargerNumKey(str):
@@ -18,6 +19,7 @@ testcases.append([[3, 30, 34, 5, 9], "9534330"])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])

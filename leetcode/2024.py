@@ -6,6 +6,7 @@
 # Return the maximum number of consecutive 'T's or 'F's in the answer key after performing the operation at most k times.
 
 from typing import List
+from copy import deepcopy
 
 
 class Solution:
@@ -32,6 +33,7 @@ testcases.append(["TTFTTFTT", 1, 5])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])

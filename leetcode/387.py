@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         seen = {}
@@ -23,6 +26,7 @@ testcases.append(["aabb", -1])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     assert (
         output == testcase[-1]

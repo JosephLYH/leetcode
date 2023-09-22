@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def trailingZeroes(self, n: int) -> int:
         # 5 * 2 = 10
@@ -12,6 +15,7 @@ testcases.append([5, 1])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     assert (
         output == testcase[-1]

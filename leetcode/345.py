@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def reverseVowels(self, s: str) -> str:
         vowels = set(["a", "e", "i", "o", "u"])
@@ -25,6 +28,7 @@ testcases.append(["leetcode", "leotcede"])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     if output != testcase[-1]:
         getattr(solution, dir(solution)[-1])(*testcase_copy[:-1])

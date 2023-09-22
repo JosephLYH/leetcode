@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         len1, len2, len3 = len(s1), len(s2), len(s3)
@@ -24,6 +27,7 @@ testcases.append(["a", "", "a", True])
 
 solution = Solution()
 for testcase in testcases:
+    testcase_copy = deepcopy(testcase)
     output = getattr(solution, dir(solution)[-1])(*testcase[:-1])
     assert (
         output == testcase[-1]
