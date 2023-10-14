@@ -1,4 +1,5 @@
 from copy import deepcopy
+from typing import *
 
 
 class Solution:
